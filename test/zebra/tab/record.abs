@@ -1,0 +1,43 @@
+# record.abs,v 0.0.1 2007/08/22 jaron
+
+encoding utf-8
+name marcxml
+attset bib1.att
+#attset gils.att
+esetname F @
+esetname B @
+
+marc usmarc.mar
+systag sysno rank
+xpath disable
+
+all any
+# melm 000 		rtype:n:range(data,06,1),Bib-level:w:range(data,07,01)
+# xelm /record/leader llength:w:range(data,0,5),rtype:w:range(data,6,1),Bib-level:w:range(data,7,1)
+
+# example: xelm /record/leader l1:w:range(data,0,5),l2:w:range(data,10,2)
+melm 001		Local-number
+melm 020$a      ISBN:w,Identifier-standard:w
+melm 020		ISBN,Identifier-standard
+melm 022$a      ISSN:w,ISBN:w
+melm 022		ISSN,Identifier-standard
+melm 023		Identifier-standard
+melm 024		Identifier-standard
+melm 025		Identifier-standard
+#melm 035		Local-number,Identifier-standard
+melm 037		Identifier-standard,Stock-number
+melm 050$b		LC-call-number:w, LC-call-number:p, LC-call-number:s
+melm 050		LC-call-number:w, LC-call-number:p, LC-call-number:s
+melm 082        Dewey-classification:w,Dewey-classification:s
+melm 100$a		Personal-name
+
+melm 245$a		Title-cover:w,Title-cover:p,Title-cover:s,Title:w,Title:p,Title:s
+melm 245$c		Author
+melm 245		Title:w,Title:p
+melm 246		Title,Title:p,Title-abbreviated,Title-expanded,Title-former
+melm 247		Title,Title:p,Title-former,Title-other-variant,Related-periodical
+melm 260$b		Publisher:w,Publisher:p
+melm 260$c		Date,Date:s,Date:y
+
+
+

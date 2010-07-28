@@ -1,0 +1,167 @@
+v0.4.1 Tue Nov 20 08:05:53 EST 2007 
+  - record retrieval has changed with batch_download branch merged into trunk.
+    this allows for records to be downloaded in a batch and tries to fall back
+    to record at a time download if batch download fails. 
+  - removed second definition of databaseName from rbzoompackage.c
+  - added RDoc style documentation to C source
+  - added tests for batch retrieval and a connection within a Thread
+
+v0.4.0 - checking in support of ZOOM::Connection#package
+  - creating a .4 version of gem
+  - added Walter McGinnis, Nicolai Moles-Benfell To Authors
+  - src/rbzoomoptions.c: Added support for rubyfying option names that 
+    contain hyphens or full stops.
+  - src/rbzoomconnection.c: Added ZOOM::Connection#package, a factory method 
+    that returns an instance of a ZOOM::Package object.
+  - added src/rbzoompackage.c:
+
+v0.3.0  Tue Jul 10 11:57:40 EDT 2007
+  - new format for this file, all changes are summarized under a version
+    no need to recreate commit messages in a text file when svn can tell us them
+  - added Rakefile
+  - applied patch from Jason Ronallo to enable raw method on records
+  - added test suite
+  - created gem for rubyforge
+
+2007-05-05  Ed Summers <ehs@pobox.com>
+  - added Ed Summers
+  - src/lib/* removed marc.rb since it isn't used and conflicts with the marc 
+    gem
+
+# Older format preserved for posterity ...
+
+2006-09-21  Laurent Sansonetti  <lrz@chopine.be>
+
+  * ChangeLog,
+    README,
+    src/**/*.{c,h,rb}:
+
+  s/gnome.org/chopine.be/g.
+
+2006-09-21  Devin Bayer  <devin@freeshell.org>
+
+  * .cvsignore:
+
+  Ignores zoom.bundle.
+
+   * sample/needle.rb:
+
+  Updated the needle demo application.
+
+   * src/rbzoomconnection.c:
+
+  Do not fail when reading options.
+
+2006-08-22  Laurent Sansonetti  <lrz@chopine.be>
+
+  * AUTHORS:
+
+  - Updated my e-mail address ;
+  - Added Devin.
+ 
+2006-08-22  Devin Bayer  <devin@freeshell.org>
+
+  * src/rbzoomrecord.c:
+
+  Added ZOOM::Record#raw, to grab a marc record in marc format.
+
+2006-08-20  Devin Bayer  <devin@freeshell.org>
+
+  * sample/needle.rb:
+
+  Added new sample, contributed by Devin Bayer.
+
+=== Ruby/ZOOM 0.2.2 ===
+
+2005-11-08  Laurent Sansonetti  <lrz@chopine.be>
+
+  * README:
+
+  Added a note about YAZ's --enable-shared problem.
+
+  * AUTHORS:
+
+  Added Pascal and Matt.
+
+2005-11-08  Matt Vanderpol  <matt@vanderpol.net>
+
+  * src/rbzoomquery.c (.new_prefix, .new_cql):
+
+  Fixed constructors.
+
+=== Ruby/ZOOM 0.2.1 ===
+
+2005-09-23  Pascal Terjan  <pterjan@linuxfr.org>
+
+  * src/rbzoomoptions.c:
+
+  Fixes segfault when rubyfying the option name.
+
+=== Ruby/ZOOM 0.2.0 ===
+
+2005-08-02  Laurent Sansonetti  <lrz@chopine.be>
+
+  * src/rbzoomresultset.rb (#[]):
+
+  Retrieves the record one by one using ZOOM_resultset_record instead
+  of getting them all in once with ZOOM_resultset_records (for a strange
+  reason sometimes the resultset was not empty but ZOOM_resultset_records
+  used to return empty records).
+
+2005-07-19  Laurent Sansonetti  <lrz@chopine.be>
+
+  * src/lib/marc.rb:
+
+  Added an experimental MARC decoder.
+
+=== Ruby/ZOOM 0.1.0 ===
+
+2005-03-18  Laurent Sansonetti  <lrz@chopine.be>
+
+  * COPYING.LIB,
+    AUTHORS,
+    README:
+
+  Added.
+
+  * src/rbzoomconnection.c,
+    src/rbzoomquery.c:
+
+  Fixed documentation.
+
+  * src/rbzoomresultset.c (#[]):
+
+  - Range objects are supported ;
+  - Do not clone nil objects.
+
+2005-03-17  Laurent Sansonetti  <lrz@chopine.be>
+
+  * doc/.cvsignore,
+    doc/gendoc.sh:
+
+  Added.
+
+  * src/rbzoom.c,
+    src/rbzoom.h,
+    src/rbzoomconnection.c,
+    src/rbzoomoptions.c,
+    src/rbzoomquery.c,
+    src/rbzoomrecord.c,
+    src/rbzoomresultset.c:
+
+  Added extdoc documentation + LGPL headers.
+
+2005-03-16  Laurent Sansonetti  <lrz@chopine.be>
+
+  * src/rbzoomrecord.c (#database, #syntax, #render, #xml):
+
+  Added.
+
+  * src/rbzoom.c,
+    sample/hello.rb:
+
+  Renamed the module name as 'ZOOM'.
+
+2005-03-14  Laurent Sansonetti  <lrz@chopine.be>
+
+  Initial RubyForge revision.
