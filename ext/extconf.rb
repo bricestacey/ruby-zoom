@@ -2,12 +2,12 @@ require 'mkmf'
 
 unless system('yaz-config')
   $stderr.puts 'yaz does not appear to be installed'
-  break
+  exit
 end
 
 unless have_header('yaz/zoom.h')
   $stderr.puts 'yaz zoom header not available'
-  break
+  exit
 end
 
 $CFLAGS << " #{`yaz-config --cflags`} "

@@ -32,10 +32,10 @@ ruby_hash_to_zoom_options (VALUE hash)
     options = ZOOM_options_create ();
     
     ary = rb_funcall (hash, rb_intern ("to_a"), 0);
-    for (i = 0; i < RARRAY (ary)->len; i++) {
-        pair = RARRAY (ary)->ptr[i];
-        key = RARRAY (pair)->ptr[0];
-        value = RARRAY (pair)->ptr[1];
+    for (i = 0; i < RARRAY_LEN(ary); i++) {
+        pair = RARRAY_PTR(ary)[i];
+        key = RARRAY_PTR(pair)[0];
+        value = RARRAY_PTR(pair)[1];
         
         switch (TYPE (value)) {
             case T_TRUE:
@@ -68,7 +68,7 @@ ruby_hash_to_zoom_options (VALUE hash)
 VALUE
 zoom_option_value_to_ruby_value (const char *value)
 {
-    int i;
+    unsigned int i;
 
     if (value == NULL)
         return Qnil; 
@@ -86,8 +86,8 @@ define_zoom_option (VALUE klass, const char *option)
     char code [1024];
     char rubyname [128];
     char c;
-    int i;
-    int j;
+    unsigned int i;
+    unsigned int j;
    
     /* rubyfy the option name */
     for (i = 0, j = 0; i < strlen (option) && j < sizeof rubyname; i++, j++) {

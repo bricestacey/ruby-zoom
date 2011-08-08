@@ -53,7 +53,7 @@ void rbz_connection_check(VALUE obj);
         
 /* useful macros */
 #if !defined (RVAL2CSTR)
-# define RVAL2CSTR(x)       (NIL_P (x) ? NULL : STR2CSTR(x))
+# define RVAL2CSTR(x)       (NIL_P (x) ? NULL : RSTRING_PTR(x))
 #endif
 #if !defined (CSTR2RVAL)
 # define CSTR2RVAL(x)       (x == NULL ? Qnil : rb_str_new2(x))
