@@ -1,4 +1,4 @@
-= Ruby/ZOOM
+Ruby/ZOOM
 =========
 
 Ruby/ZOOM provides a Ruby binding to the Z39.50 Object-Orientation Model 
@@ -13,7 +13,8 @@ any ZOOM compliant implementation.
 Ruby/ZOOM is free-software, covered by the GNU Lesser General Public License 
 and provided without any warranties of any kind.
 
-== Requirements
+Requirements
+------------
 
     Ruby:       http://www.ruby-lang.org/
     YAZ (*):    http://www.indexdata.dk/yaz/ 
@@ -22,24 +23,28 @@ and provided without any warranties of any kind.
         script before building YAZ.  Ruby/ZOOM requires a YAZ shared library 
         and YAZ does not build it by default. 
 
-== Install
+Install
+-------
 
     0. install Ruby
     1. install YAZ
     2. gem install ruby-zoom
 
-== Build from Source
+Build from Source
+-----------------
 
     0. checkout out code from svn at rubyforge
     1. install Rake
     2. rake 
     3. gem install pkg/zoom-*.gem
 
-== Samples
+Samples
+-------
 
     Some programming examples are available in the `sample' directory. 
 
-== Canonical Sample Program
+Canonical Sample Program
+------------------------
 
   To give a flavour of the Ruby binding, here is ZOOM's equivalent of the
   ``Hello World'' program: a tiny Z39.50 client that fetches and displays
@@ -56,7 +61,8 @@ and provided without any warranties of any kind.
       p rset[0]
     end
 
-== ZOOM Extended Services
+ZOOM Extended Services
+----------------------
 
   With release 0.4.1 extended services support has been added which allows
   create, update and delete of records. This only works for XML.
@@ -76,7 +82,8 @@ and provided without any warranties of any kind.
     end
 
 
-== Copying
+Copying
+-------
 
     Copyright (c) 2005 Laurent Sansonetti <lrz@chopine.be>
       
@@ -84,6 +91,7 @@ and provided without any warranties of any kind.
     You can distribute/modify this program under the terms of
     the GNU LESSER GENERAL PUBLIC LICENSE Version 2.1.
 
-== Project Website
+Project Website
+---------------
 
     http://ruby-zoom.rubyforge.org
