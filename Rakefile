@@ -4,10 +4,8 @@ require 'rubygems'
 require 'rake'
 require 'rake/clean'
 require 'rake/testtask'
-#require 'rake/rdoctask'
-require 'rdoc/task'
+require 'rake/rdoctask'
 require 'rake/packagetask'
-#require 'package_task'
 require 'rake/gempackagetask'
 require 'mkmf'
 
@@ -28,15 +26,15 @@ task :build => [:clean] do |t|
 end
 
 Rake::TestTask.new('test') do |t|
-  t.pattern = ['test/*_test.rb']
-  t.verbose = true
+  t.test_files = FileList['test/*_test.rb']
   t.ruby_opts = ['-r test/unit', '-I ext', '-r zoom']
+  t.verbose = true
 end
 
 Rake::TestTask.new('live_test') do |t|
-  t.pattern = 'test/*_live.rb'
-  t.verbose = true
+  t.test_files = FileList['test/*_live.rb']
   t.ruby_opts = ['-r test/unit', '-I ext', '-r zoom']
+  t.verbose = true
 end
 
 spec = Gem::Specification.new do |s|
