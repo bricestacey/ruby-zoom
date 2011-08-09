@@ -50,7 +50,7 @@ spec = Gem::Specification.new do |s|
     Dir.glob('ext/*.rb') +
     Dir.glob('test/**/*') + 
     Dir.glob('sample/**/*') +
-    ['README', 'ChangeLog', 'Rakefile']
+    ['README.md', 'ChangeLog', 'Rakefile']
   s.extensions = 'ext/extconf.rb'
 end
 
@@ -60,6 +60,6 @@ Rake::GemPackageTask.new(spec) do |pkg|
 end
 
 Rake::RDocTask.new do |rd|
-  rd.main = "README"
-  rd.rdoc_files.include("README", "ext/*.c")
+  rd.main = "README.md"
+  rd.rdoc_files.include("README.md", "ext/*.c")
 end
