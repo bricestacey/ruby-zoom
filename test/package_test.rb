@@ -31,7 +31,7 @@ class TestPackage < Test::Unit::TestCase
     #option correlationInfo.note
       p = @connection.package
       assert(p.respond_to?('correlation_info_note'))
-      assert(true, p.respond_to?('correlation_info_note='))
+      assert(p.respond_to?('correlation_info_note='))
       assert_equal(true, p.respond_to?('set_correlation_info_note'))
 
       p.correlation_info_note = 'correlation_info_note value'
