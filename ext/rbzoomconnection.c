@@ -285,7 +285,7 @@ rbz_connection_package(VALUE self)
 {
   ZOOM_connection connection;
   ZOOM_options options;
-  ZOOM_package package;
+  VALUE package;
 
   connection = rbz_connection_get (self);
   options = ZOOM_options_create ();
