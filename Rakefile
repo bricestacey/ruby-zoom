@@ -42,6 +42,7 @@ spec = Gem::Specification.new do |s|
   s.version = RUBY_ZOOM_VERSION
   s.homepage = 'http://ruby-zoom.rubyforge.org'
   s.platform = Gem::Platform::RUBY
+  s.author = [ "Laurent Sansonetti", "Ed Summers" ]
   s.summary = 'Ruby/ZOOM provides a Ruby binding to the Z40.50 Object-Orientation Model (ZOOM), an abstract object-oriented programming interface to a subset of the services specified by the Z39.50 standard, also known as the international standard ISO 23950.  This version introduces ZOOM Extended Services.'
   s.autorequire = 'zoom'
   s.files = 
