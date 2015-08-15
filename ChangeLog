@@ -1,3 +1,7 @@
+v0.5.0 Sat Aug 15 11:39:00 EST 2015
+	- Added support for Ruby 1.9.2.
+	- Gemspec and build tooling improvements.
+
 v0.4.1 Tue Nov 20 08:05:53 EST 2007 
   - record retrieval has changed with batch_download branch merged into trunk.
     this allows for records to be downloaded in a batch and tries to fall back

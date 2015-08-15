@@ -1,4 +1,4 @@
-RUBY_ZOOM_VERSION = '0.4.1'
+RUBY_ZOOM_VERSION = '0.5.0'
 
 Gem::Specification.new do |s|
   s.name = 'zoom'
