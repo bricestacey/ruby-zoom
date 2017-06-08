@@ -19,7 +19,7 @@ require 'rexml/document'
 servers_source = [
     # Server, Username, Password
     [ 'z3950.loc.gov:7090/Voyager' ], # Library of Congress
-    [ 'amicus.nlc-bnc.ca/ANY', 'akvadrako', 'aw4gliu' ], # Canada
+    [ 'amicus.nlc-bnc.ca/ANY', 'USERNAME', 'PASSWORD' ], # Canada
     [ 'catnyp.nypl.org:210/INNOPAC' ], # New York Public
     [ 'z3950.copac.ac.uk:2100/COPAC' ], # United Kingdom
     [ 'z3950.btj.se:210/BURK' ], # Sweden
