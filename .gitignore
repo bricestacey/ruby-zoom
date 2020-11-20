@@ -1,3 +1,4 @@
+Gemfile.lock
 ext/*.o
 ext/mkmf.log
 ext/zoom.so
