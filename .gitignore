@@ -1,0 +1,4 @@
+ext/*.o
+ext/mkmf.log
+ext/zoom.so
+ext/Makefile
