@@ -1,8 +1,9 @@
 require 'mkmf'
+require 'pkg-config'
 
-unless system('yaz-config')
-  $stderr.puts 'yaz does not appear to be installed'
-  exit
+unless PKGConfig.have_package('yaz')
+  $stderr.puts 'yaz development files do not appear to be installed'
+  exit(false)
 end
 
 unless have_header('yaz/zoom.h')
@@ -10,8 +11,8 @@ unless have_header('yaz/zoom.h')
   exit
 end
 
-$CFLAGS << " #{`yaz-config --cflags`} "
-$LDFLAGS << " #{`yaz-config --libs`} "
+$CFLAGS << " #{PKGConfig.cflags('yaz')} "
+$LDFLAGS << " #{PKGConfig.libs('yaz')} "
 
 create_makefile("zoom")
 
