@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
     ['README.md', 'ChangeLog', 'Rakefile']
   s.extensions = 'ext/extconf.rb'
 
-  s.add_dependency "pkg-config", "~> 1.4.4"
+  s.add_dependency "pkg-config", "~> 1.5.1"
   s.add_development_dependency "rake", "~> 13.0"
   s.add_development_dependency "test-unit", "~> 3.3"
 end
