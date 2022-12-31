@@ -26,7 +26,7 @@ task :build => [:clean] do |t|
 end
 
 task :package do
-  system('gem build zoom.gemspec')
+  system('gem build alexandria-zoom.gemspec')
 end
 
 Rake::TestTask.new('test') do |t|

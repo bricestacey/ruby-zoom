@@ -1,7 +1,7 @@
 RUBY_ZOOM_VERSION = '0.5.0'
 
 Gem::Specification.new do |s|
-  s.name = 'zoom'
+  s.name = 'alexandria-zoom'
   s.version = RUBY_ZOOM_VERSION
   s.homepage = 'http://ruby-zoom.rubyforge.org'
   s.platform = Gem::Platform::RUBY
