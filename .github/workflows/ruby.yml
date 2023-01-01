@@ -52,3 +52,5 @@ jobs:
           bundler-cache: true
       - name: Run RuboCop
         run: bundle exec rubocop -P
+      - name: Check manifest
+        run: bundle exec rake manifest:check
