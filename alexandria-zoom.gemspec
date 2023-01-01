@@ -19,7 +19,6 @@ Gem::Specification.new do |s|
   s.metadata["rubygems_mfa_required"] = "true"
   s.required_ruby_version = ">= 2.7.0"
 
-  s.autorequire = "zoom"
   s.files =
     Dir.glob("ext/*.c") +
     Dir.glob("ext/*.h") +
