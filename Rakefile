@@ -45,9 +45,8 @@ Rake::Manifest::Task.new do |t|
   t.patterns = ["ext/*.c",
                 "ext/*.h",
                 "ext/*.rb",
-                "test/**/*",
                 "sample/**/*",
-                "README.md", "ChangeLog", "Makefile"]
+                "README.md", "ChangeLog", "Makefile", "LICENSE"]
 end
 
 Rake::RDocTask.new do |rd|
