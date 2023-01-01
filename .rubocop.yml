@@ -1,0 +1,27 @@
+inherit_from: .rubocop_todo.yml
+
+inherit_mode:
+  merge:
+    - Exclude
+
+AllCops:
+  Exclude:
+    - 'sample/*'
+  NewCops: enable
+  TargetRubyVersion: 2.7
+
+# Be lenient with line length
+Layout/LineLength:
+  Max: 92
+
+# Allow both real comparison and predicate methods
+Style/NumericPredicate:
+  Enabled: false
+
+# Do not commit to use of interpolation
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+# Prefer symbols to look like symbols
+Style/SymbolArray:
+  EnforcedStyle: brackets
