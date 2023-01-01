@@ -16,8 +16,10 @@ Gem::Specification.new do |s|
     Services.
   TEXT
 
-  s.metadata["rubygems_mfa_required"] = "true"
+  s.license = "LGPL-2.1"
   s.required_ruby_version = ">= 2.7.0"
+
+  s.metadata["rubygems_mfa_required"] = "true"
 
   s.files =
     Dir.glob("ext/*.c") +
