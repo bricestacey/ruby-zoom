@@ -1,6 +1,6 @@
-01109cam  2200277 a 4500
+01047cam  2200265 a 4500
 001 708964
-005 19980710092633.8
+005 20190603165249.0
 008 970604s1997    inuab    b    001 0 eng  
 035    $9 (DLC)   97023698
 906    $a 7 $b cbc $c orignew $d 1 $e ocip $f 19 $g y-gencatlg
@@ -18,5 +18,4 @@
 700 1  $a Farlow, James Orville.
 700 2  $a Brett-Surman, M. K., $d 1950-
 920    $a **LC HAS REQ'D # OF SHELF COPIES**
-991    $b c-GenColl $h QE862.D5 $i C697 1997 $t Copy 1 $w BOOKS
 991    $b r-SciRR $h QE862.D5 $i C697 1997 $t Copy 1 $w GenBib bi 98-003434
